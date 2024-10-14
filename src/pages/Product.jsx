@@ -1,13 +1,25 @@
-import { useState } from "react";
-//import { fetchData } from "../utils/fetchData.js";
+import { useState, useEffect } from "react";
+import { fetchData } from "../utils/fetchData.js";
+
+import { IoChevronBack } from "react-icons/io5";
+import { IoIosStar } from "react-icons/io";
 
 export function Product() {
- // const [counter, setCounter] = useState(0);
+  const [productsData, setProductsData] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchData("product")
+      .then((data) => setProductsData(data))
+      .catch((error) => setError(JSON.stringify(error)));
+  }, []);
 
   return (
     <>
       <div className="upper-half">
-        <div className="backwards">icon</div>
+        <div className="backwards">
+          <IoChevronBack />
+        </div>
         <div className="choose-color">
           <div className="white"></div>
           <div className="brown"></div>
@@ -15,21 +27,28 @@ export function Product() {
         </div>
       </div>
       <div className="lower-half">
-        <h2>ProductName</h2>
-        <p>PriceTag</p>
-        <div>
-          <button>-</button>
-          <p>0</p>
-          <button>+</button>
-          {/* <button onClick={setCounter(()=> (prev) => prev + 1)}>+</button>
-          <p>{counter}</p>
-          <button onClick={setCounter(() => (prev) => prev - 1)}>-</button> */}
-        </div>
-        <div className="stars">
-          <p>Stars</p>
-          <p>starsReview</p>
-        </div>
-        <p>ProductDescription</p>
+        {productsData &&
+          productsData.length > 0 &&
+          Array.isArray(productsData) &&
+          productsData.map((product, index) => (
+            <div key={index}>
+              <h2>{product.title}</h2>
+              <p>{product.priceTag}</p>
+              <div>
+                <button >-</button>
+                <p>{product.quantity}</p>
+                <button >+</button>
+              </div>
+              <div className="stars">
+                <p>
+                  <IoIosStar />
+                </p>
+                <p>{product.starsReview} stars</p>
+              </div>
+              <p>{product.productDescription}</p>
+            </div>
+          ))}
+
         <button>save Favorite</button>
         <button>Add to cart</button>
       </div>
