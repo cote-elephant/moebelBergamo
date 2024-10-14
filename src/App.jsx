@@ -1,18 +1,12 @@
-
-import { Product } from "./pages/Product.jsx";
-import Category from "./pages/Category.jsx";
-import { createRoot } from 'react-dom/client';
-
-
-function App() {
-
-
+import { Outlet } from "react-router-dom";
+const App = () => {
   return (
     <>
-      <Category/>
-      <Product/>
+      <Outlet />
+
     </>
   );
-}
+};
+
 
 export default App;
