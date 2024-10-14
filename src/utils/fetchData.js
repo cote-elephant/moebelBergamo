@@ -8,8 +8,9 @@ export const fetchData = async (endpoint) => {
     return fetch(`${DB_URL}/${endpoint}`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         return data;
-        // console.log(data);
+
       });
   } catch (error) {
     console.log(error);
