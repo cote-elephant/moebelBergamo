@@ -1,8 +1,23 @@
-# React + Vite
+# Aufteilung
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+jeder arbeitet in seinem eigenen Branch
 
-Currently, two official plugins are available:
+- yasin, hueseyin, fabio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+alle 60 min Zwischenstand-Treffen
+bei jeder Fragen(spontan, oder Probleme) einfach einmischen
+
+Components:
+
+Hüseyin:
+alles zum Category
+
+Yasin:
+AppRouter
+NavBar in Home intergrieren
+Categoryleiste (von hüseyin) in Home integrieren
+
+
+Fabio:
+Productpage
+(Kontaktpage)
