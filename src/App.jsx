@@ -1,15 +1,11 @@
-
-import { Product } from "./pages/Product.jsx";
-
-
-function App() {
-
-
+import { Outlet } from "react-router-dom";
+const App = () => {
   return (
     <>
-      <Product/>
+      <Outlet />
     </>
   );
-}
+};
+
 
 export default App;
