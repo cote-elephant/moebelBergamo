@@ -32,4 +32,4 @@ function CategoryLeiste() {
   );
 }
 
-export default CategoryNav;
+export default CategoryLeiste;
