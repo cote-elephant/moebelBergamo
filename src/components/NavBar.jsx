@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHome, FaBookmark, FaShoppingCart, FaEnvelope, FaUser } from 'react-icons/fa';
-import './Navbar.css'; // Du kannst hier deine CSS-Datei für die Styling hinzufügen
+import '../styles/navbar.css'; // Du kannst hier deine CSS-Datei für die Styling hinzufügen
 
 const Navbar = () => {
   return (
