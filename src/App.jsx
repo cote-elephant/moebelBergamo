@@ -1,15 +1,14 @@
-import { useState } from 'react'
 
+import { Product } from "./pages/Product.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-     <h1>hello
-     </h1>
+      <Product/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
