@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaStar, FaChair, FaTable, FaCouch, FaBed, FaLightbulb } from 'react-icons/fa'; // Icons importieren
-// css importieren
+import '../styles/categorypage.css'; // CSS importieren
 
 function CategoryLeiste() {
   const [activeCategory, setActiveCategory] = useState('Popular');

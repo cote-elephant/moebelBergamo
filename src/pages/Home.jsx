@@ -1,6 +1,6 @@
 import Navbar from "../components/NavBar.jsx";
 import CategoryLeiste from "../components/CategoryLeiste.jsx"
-import '../styles/home.css'
+// import '../styles/home.css'
 
 const Home = () => {
 return (

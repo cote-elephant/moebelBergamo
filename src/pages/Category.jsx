@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CategoryLeiste from '../components/CategoryLeiste';
 import { FaShoppingCart, FaSearch, FaShoppingBag } from 'react-icons/fa';
 import { fetchData } from '../utils/fetchData.js';
+import "../styles/categorypage.css";
 
 
 // css importieren
